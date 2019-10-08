@@ -289,7 +289,7 @@ div.keymap-char { border-style: solid; border-radius: 0.5em; border-width: 0.05e
 span.small-caps { font-variant: small-caps; }
 span.italic { font-style: italic; }
 
-p.literature { margin-left: 2em; margin-bottom: 0.5em; margin-top: 0.5em; }
+p.literature { margin-left: 3em; margin-bottom: 0.5em; margin-top: 0.5em; text-indent: -2.5em; }
 
 .content-block-title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
