@@ -66,6 +66,7 @@ var greek_keymap = {
 	"'p'" : function(editor){ editor.getDoc().replaceRange('π',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
 	"'r'" : function(editor){ editor.getDoc().replaceRange('ρ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
 	"'s'" : function(editor){ editor.getDoc().replaceRange('σ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
+	"'S'" : function(editor){ editor.getDoc().replaceRange('ς',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
 	"'t'" : function(editor){ editor.getDoc().replaceRange('τ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
 	"'u'" : function(editor){ editor.getDoc().replaceRange('υ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
 	"'P'" : function(editor){ editor.getDoc().replaceRange('φ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false); },
@@ -153,6 +154,7 @@ $("#greek_language").on('click',function(event){ editor.removeKeyMap(aramaic_key
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_pe"><p class="paragraph-keymap-char">p &DoubleRightArrow; &#x03C0;</p></div>');
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_resh"><p class="paragraph-keymap-char">r &DoubleRightArrow; &#x03C1;</p></div>');
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_sigma"><p class="paragraph-keymap-char">s &DoubleRightArrow; &#x03C3;</p></div>');
+							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_sigma_fin"><p class="paragraph-keymap-char">S &DoubleRightArrow; &#x03C2;</p></div>');
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_tau"><p class="paragraph-keymap-char">t &DoubleRightArrow; &#x03C4;</p></div>');
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_ypsilon"><p class="paragraph-keymap-char">u &DoubleRightArrow; &#x03C5;</p></div>');
 							$("#placeholder_for_inputmap").append('<div class="keymap-char" id="keymap_greek_phi"><p class="paragraph-keymap-char">P &DoubleRightArrow; &#x03C6;</p></div>');
@@ -184,6 +186,7 @@ $("#greek_language").on('click',function(event){ editor.removeKeyMap(aramaic_key
 						$("#keymap_greek_pe").on('click',function(event){editor.getDoc().replaceRange('π',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
 						$("#keymap_greek_resh").on('click',function(event){editor.getDoc().replaceRange('ρ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
 						$("#keymap_greek_sigma").on('click',function(event){editor.getDoc().replaceRange('σ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
+						$("#keymap_greek_sigma_fin").on('click',function(event){editor.getDoc().replaceRange('ς',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
 						$("#keymap_greek_tau").on('click',function(event){editor.getDoc().replaceRange('τ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
 						$("#keymap_greek_ypsilon").on('click',function(event){editor.getDoc().replaceRange('υ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
 						$("#keymap_greek_phi").on('click',function(event){editor.getDoc().replaceRange('φ',editor.getDoc().getCursor('from'),editor.getDoc().getCursor('to'),false);});
