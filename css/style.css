@@ -154,8 +154,7 @@ svg.feather {
         max-width: calc(100% - 5rem); } }
     .navbar .navbar-brand.site-title-with-logo {
       margin-left: -2rem;
-      margin-right: auto;
-	  font-family: Garamond,Times,serif; }
+      margin-right: auto; }
     .navbar .navbar-brand img {
       max-height: 100%;
       width: auto; }
