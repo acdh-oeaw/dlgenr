@@ -1,0 +1,89 @@
+<template>
+    <div class="dlgenr-client-dictionary-entry-details">
+        <dlgenr-client-header v-if="entry" v-bind:entry="entry"/>
+        <dlgenr-client-grammatical-information v-if="entry" v-bind:entry="entry"/>
+        <dlgenr-client-variant v-for="(variantPosition,index) in variants" v-bind:key="index" v-bind:entry="entry" v-bind:variantPosition="variantPosition"/>
+        <dlgenr-client-inflected-form v-for="(inflectedFormPosition,index) in inflectedForms" v-bind:key="index" v-bind:entry="entry" v-bind:inflectedFormPosition="inflectedFormPosition"/>
+        <dlgenr-client-equivalent v-for="(equivalentPosition,index) in equivalentForms" v-bind:key="index" v-bind:entry="entry" v-bind:equivalentPosition="equivalentPosition"/>
+        <dlgenr-client-usage v-if="entry" v-bind:entry="entry"/>
+        <dlgenr-client-label v-if="entry" v-bind:entry="entry"/>
+        <dlgenr-client-etymology v-if="entry" v-bind:entry="entry"/>
+        <dlgenr-client-sense v-for="(sensePosition,index) in sensePositions" v-bind:key="index" v-bind:entry="entry" v-bind:sensePosition="sensePosition" v-bind:numberOfSenses="sensePositions.length"/>
+        <dlgenr-client-note v-if="entry" v-bind:entry="entry"/>
+    </div>
+</template>
+<script>
+import DlGenRClientHeader from './dlgenr-client-header';
+import DlGenRClientUsage from './dlgenr-client-usage';
+import DlGenRClientLabel from './dlgenr-client-label';
+import DlGenRClientEtymology from './dlgenr-client-etymology';
+import DlGenRClientGrammaticalInformation from './dlgenr-client-grammatical-information';
+import DlGenRClientVariant from './dlgenr-client-variant';
+import DlGenRClientInflectedForm from './dlgenr-client-inflected-form';
+import DlGenRClientEquivalent from './dlgenr-client-equivalent';
+import DlGenRClientSense from './dlgenr-client-sense';
+import DlGenRClientNote from './dlgenr-client-note';
+
+export default {
+  name: 'dlgenr-client-dictionary-entry-details',
+  components: {
+    'dlgenr-client-header' : DlGenRClientHeader,
+    'dlgenr-client-usage' : DlGenRClientUsage,
+    'dlgenr-client-label' : DlGenRClientLabel,
+    'dlgenr-client-etymology' : DlGenRClientEtymology,
+    'dlgenr-client-grammatical-information' : DlGenRClientGrammaticalInformation,
+    'dlgenr-client-variant' : DlGenRClientVariant,
+    'dlgenr-client-inflected-form' : DlGenRClientInflectedForm,
+    'dlgenr-client-equivalent' : DlGenRClientEquivalent,
+    'dlgenr-client-sense' : DlGenRClientSense,
+    'dlgenr-client-note' : DlGenRClientNote
+  },
+  props: { entry: { type: XMLDocument }},
+  computed : {
+    variants(){
+      let numberOfFormNodes = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form').length;
+      let positionsOfVariants = new Array();
+      for (let i = 0; i < numberOfFormNodes; i++){
+        let attribute = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form')[i].getAttribute('type');
+        if (attribute == 'variant') { positionsOfVariants.push(i); }
+      }
+      return positionsOfVariants;
+    },
+    inflectedForms(){
+      let numberOfFormNodes = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form').length;
+      let positionsOfInflectedForms = new Array();
+      for (let i = 0; i < numberOfFormNodes; i++){
+        let attribute = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form')[i].getAttribute('type');
+        if (attribute == 'inflected') { positionsOfInflectedForms.push(i); }
+      }
+      return positionsOfInflectedForms;
+    },
+    equivalentForms(){
+      let numberOfFormNodes = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form').length;
+      let positionsOfEquivalentForms = new Array();
+      for (let i = 0; i < numberOfFormNodes; i++){
+        let attribute = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('form')[i].getAttribute('type');
+        if (attribute == 'equivalent') { positionsOfEquivalentForms.push(i); }
+      }
+      return positionsOfEquivalentForms;
+    },
+    sensePositions(){
+      let numberOfSenses = this.$props.entry.getElementsByTagName('entry')[0].getElementsByTagName('sense').length;
+      let sensePositions = new Array(numberOfSenses);
+      for (let i = 0; i < numberOfSenses; i++){
+        sensePositions[i] = i;
+      }
+      return sensePositions;
+    }
+  }
+}
+</script>
+
+<style scoped>
+div.dlgenr-client-dictionary-entry-details {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1pt;
+  border-radius: 1em;
+}
+</style>

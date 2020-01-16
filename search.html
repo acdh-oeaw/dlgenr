@@ -11,6 +11,7 @@
 	<link rel="pingback" href="https://fundament.acdh.oeaw.ac.at/xmlrpc.php">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
+	<link href="./css/app.d6f268cd.css" rel=stylesheet>
 	<title>DLGenR - Search</title>
 <style type="text/css">
 /**
@@ -64,6 +65,7 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Frank+Ruhl+Libre&display=swap" rel="stylesheet" />
 <link rel='stylesheet' id='bodhi-svgs-attachment-css'  href='https://fundament.acdh.oeaw.ac.at/wp-content/plugins/svg-support/css/svgs-attachment.css?ver=4.9.11' type='text/css' media='all' />
 <link rel='stylesheet' id='theme-asset-styles-css'  href='./css/assets.min.css' type='text/css' media='' />
 <link rel='stylesheet' id='theme-styles-css'  href='./css/style.css' type='text/css' media='' />
@@ -228,13 +230,12 @@ body{font-family:inherit;font-weight:400;background-color:#F1F1F1;border-right-w
 </ul>-->
 <h4 id="browseindices">Browse Indizes</h4>
 <p>It is possible to get an overview of all loanwords in the midrash Genesis Rabbah either the Greek forms of the words or the Aramaic transcriptions:</p>
-<ul>
 <a id="greekindex"></a>
-<li><a href="./browseindizes.html#greekindex" rel="noopener">Browse Greek word index.</a></li>
+<!--<div id="browsegreekindex" class="nav-indices">Browse Greek word index.</div>-->
 <a id="aramaicindex"></a>
-<li><a href="./browseindizes.html#aramaicindex" rel="noopener">Browse Aramaic word index.</a></li>
-</ul>
-<p style="font-size:32pt;"></p>
+<!--<div id="browsearamaicindex" class="nav-indices">Browse Aramaic word index.</div>-->
+<!--<div id="indices"></div>-->
+<div id="app"/><!-- vue.js application -->
 <!-- Start shortcoder <h3 id="getting-started" class="anchored">Getting Started</h3>
 <p>If you want to quickly add Fundament to your project or test it out, you may use it remotely provided by on our servers. For long term usage you may want to download the source files and implement them in your application.</p>
 <h4>Adding the CSS</h4>
@@ -334,8 +335,9 @@ https://fundament.acdh.oeaw.ac.at/html/dist/fundament/js/fundament.min.js</pre><
 <script type='text/javascript' src='https://fundament.acdh.oeaw.ac.at/wp-content/themes/fundament_wp/js/theme.min.js?ver=1.1.0'></script>
 <script type='text/javascript' src='https://fundament.acdh.oeaw.ac.at/wp-includes/js/wp-embed.min.js?ver=4.9.11'></script>
 <script type="text/javascript" src="./javascript/editor.js" defer="defer"></script>
-
+<!--<script type="text/javascript" src="./javascript/browseindizes.js" defer="defer"></script>-->
+<script type='text/javascript' src="./javascript/chunk-vendors.4a284851.js" defer="defer"></script>
+<script type='text/javascript' src="./javascript/app.59c0ed4c.js" defer="defer"></script>										
 </body>
-
 </html>
 
