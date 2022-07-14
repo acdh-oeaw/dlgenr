@@ -5,7 +5,7 @@
         <span class="dlgenr-client-citation-plain-text"> in: </span>
         <span class="dlgenr-client-citation-plain-text-italic">Dictionary of Loanwords in the Midrash Genesis Rabbah. </span>
         <span class="dlgenr-client-citation-plain-text">Eds. </span>
-        <span class="dlgenr-client-citation-plain-text-caps">Susanne Plietzsch; Christina Katsikadeli; Vladislav Slepoy. </span>
+        <span class="dlgenr-client-citation-plain-text-caps">Susanne Plietzsch; Christina Katsikadeli; Vladislav Slepoy; Thomas Klampfl. </span>
         <span class="dlgenr-client-citation-url">https://dlgenr.acdh.oeaw.ac.at</span>
         <span class="dlgenr-client-citation-plain-text">, 2021, s.v.</span>
     </div>

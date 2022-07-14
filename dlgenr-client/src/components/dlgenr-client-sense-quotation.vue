@@ -1,10 +1,12 @@
 <template>
     <div class="dlgenr-client-sense-quotation">
+        <div>
         <span v-for="(pieceOfHebrewText,index) in piecesOfHebrewText" v-bind:key="index">
             <component v-if="pieceOfHebrewText.type == 'hebrew'" v-bind:is="dlGenRClientSenseQuotationTextHebrew" v-bind:hebrewText="pieceOfHebrewText.text"/>
             <component v-if="pieceOfHebrewText.type == 'hebrewLemma'" v-bind:is="dlGenRClientSenseQuotationLemmaHebrew" v-bind:hebrewText="pieceOfHebrewText.text" v-bind:footnoteNumber="pieceOfHebrewText.number"/>
             <component v-if="pieceOfHebrewText.type == 'reference'" v-bind:is="dlGenRClientSenseQuotationDictionaryReference" v-bind:hebrewText="pieceOfHebrewText.text"/>
         </span>
+        </div>
         <dlgenr-client-sense-quotation-bibliographic-reference v-bind:bibliographicReference="bibliographicReference"/>
         <dlgenr-client-sense-quotation-critical-apparatus v-for="(apparatus,index) in apparata" v-bind:key="index" v-bind:entry="entry" v-bind:positionOfApparatus="apparatus" v-bind:position="position" v-bind:positionOfQuotation="positionOfQuotation"/>
         <dlgenr-client-sense-quotation-translation v-bind:entry="entry" v-bind:position="position" v-bind:positionOfQuotation="positionOfQuotation"/>

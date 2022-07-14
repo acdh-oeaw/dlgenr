@@ -30,7 +30,7 @@
                                 case 'hint': usageType = "Hint"; break;
                                 case 'meaningType': usageType = "Meaning type"; break;
                                 case 'normativity': usageType = "Normativity"; break;
-                                case 'socioCultural': usageType = "Socio cultural"; break;
+                                case 'socioCultural': usageType = "Socio-cultural norm"; break;
                                 case 'textType': usageType = "Text type"; break;
                                 case 'time': usageType = "Time"; break;
                                 default: usageType = usageTypeTEI;
@@ -76,7 +76,7 @@
     p.dlgenr-client-usage-label
     {
         font-family: 'Cormorant Garamond', serif; 
-        font-weight: medium; 
+        font-weight: bold;
         color: black;
         font-size: 12pt;
         margin-top: 0pt;

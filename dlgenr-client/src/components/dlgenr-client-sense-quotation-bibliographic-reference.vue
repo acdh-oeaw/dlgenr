@@ -1,5 +1,5 @@
 <template>
-    <span class="dlgenr-client-sense-quotation-bibliographic-reference">({{ bibliographicReference }})</span>
+    <div class="dlgenr-client-sense-quotation-bibliographic-reference">({{ bibliographicReference }})</div>
 </template>
 <script>
 export default {
@@ -13,10 +13,11 @@ export default {
 }
 </script>
 <style scoped>
-    span.dlgenr-client-sense-quotation-bibliographic-reference {
+    div.dlgenr-client-sense-quotation-bibliographic-reference {
         font-family: 'Cormorant Garamond', serif;
         font-weight: medium;
         font-size: 12pt;
         color: black;
+        padding-left:20pt;
     }
 </style>
