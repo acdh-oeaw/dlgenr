@@ -36,6 +36,7 @@ export default {
     {
         font-family: 'Cormorant Garamond', serif;
         font-weight: medium;
+        font-style: italic;
         color: black;
         font-size: 12pt;
     }

@@ -26,7 +26,7 @@
                                 case 'attitude': usageType = "Attitude"; break;
                                 case 'domain': usageType = "Domain"; break;
                                 case 'frequency': usageType = "Frequency"; break;
-                                case 'geographic': usageType = "Geographic"; break;
+                                case 'geographic': usageType = "Geographic distribution"; break;
                                 case 'hint': usageType = "Hint"; break;
                                 case 'meaningType': usageType = "Meaning type"; break;
                                 case 'normativity': usageType = "Normativity"; break;
