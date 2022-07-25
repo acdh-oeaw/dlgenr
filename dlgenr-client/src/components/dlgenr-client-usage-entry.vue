@@ -3,7 +3,6 @@
         <span class="dlgenr-client-usage-entry-type">{{ usageEntry.usageType }}</span>
         <span class="dlgenr-client-usage-entry-delimiter">: </span>
         <span class="dlgenr-client-usage-entry-value">{{ usageEntry.usageContent }}</span>
-        <!--<span class="dlgenr-client-usage-entry-delimiter" v-if="usageEntry.isNotLast">, </span>-->
     </div>
 </template>
 <script>
